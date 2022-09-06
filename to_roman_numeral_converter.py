@@ -44,6 +44,5 @@ def to_roman_numeral(arabic_number: int) -> str:
     return result
 
 
-if __name__ == "__main__":
-    print(to_arabic_number("MCMXCIV"))
-    print(to_roman_numeral(1994))
+# learnt from
+# https://www.youtube.com/watch?v=ohBNdSJyLh8
