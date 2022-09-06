@@ -1,4 +1,4 @@
-def romanToInt(s: str) -> int:
+def to_arabic_number(s: str) -> int:
     roman_table = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     result = 0
 
@@ -14,4 +14,36 @@ def romanToInt(s: str) -> int:
     return result
 
 
-print(romanToInt("MCMXCIV"))
+# Learnt from
+# https://www.youtube.com/watch?v=3jdxYj3DD98
+# https://www.youtube.com/watch?v=_5MYW7n1U-I
+
+
+def to_roman_numeral(arabic_number: int) -> str:
+    roman_table = [
+        ["I", 1],
+        ["IV", 4],
+        ["V", 5],
+        ["IX", 9],
+        ["X", 10],
+        ["XL", 40],
+        ["L", 50],
+        ["XC", 90],
+        ["C", 100],
+        ["CD", 400],
+        ["D", 500],
+        ["CM", 900],
+        ["M", 1000],
+    ]
+    result = ""
+    for roman_symbol, value in reversed(roman_table):
+        if arabic_number // value:
+            count = arabic_number // value
+            result += roman_symbol * count
+            arabic_number = arabic_number % value
+    return result
+
+
+if __name__ == "__main__":
+    print(to_arabic_number("MCMXCIV"))
+    print(to_roman_numeral(1994))
