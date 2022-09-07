@@ -1,7 +1,12 @@
 import click
 
 
-@click.command()
+@click.group()
+def cli():
+    pass
+
+
+@cli.group()
 # @click.argument("roman_numeral")
 @click.option("--roman", prompt="Roman numeral to convert please", type=str)
 def to_arabic_number(roman) -> int:
@@ -21,7 +26,7 @@ def to_arabic_number(roman) -> int:
     # return result
 
 
-@click.command()
+@cli.group()
 @click.option("--arabic_number", prompt="Integer you want to convert", type=int)
 def to_roman_numeral(arabic_number) -> str:
     roman_table = [
@@ -49,5 +54,6 @@ def to_roman_numeral(arabic_number) -> str:
 
 
 if __name__ == "__main__":
+    cli()
     to_roman_numeral()
     to_arabic_number()
