@@ -9,3 +9,10 @@
 
 # 3: Click for bespoke command line applications
 # 3.A. How to run file when using click
+
+# roman to arabic Learnt from
+# https://www.youtube.com/watch?v=3jdxYj3DD98
+# https://www.youtube.com/watch?v=_5MYW7n1U-I
+
+# arabic to romanlearnt from
+# https://www.youtube.com/watch?v=ohBNdSJyLh8
